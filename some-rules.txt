@@ -1,0 +1,39 @@
+Rest services description.Requirements
+1) Apply for bond - /applications/save (POST)
+2) Default coupon will be insert when application started (data.sql)
+3) adjust the term of bonds - /applications/{id}  (PUT)
+4) Retreive whole history by customer - /application-histories/customer/{customerId} (GET)
+
+simple rest requests
+1) Create application
+{
+    "id": 1,
+    "applicationDate": "2019-05-15",
+    "term": 5,
+    "customer": {
+        "id": 1,
+        "firstName": "Elvin",
+        "lastName": "Aliyev",
+        "age": 31
+    },
+    "coupon": {
+        "id": 101,
+        "rate": 5,
+        "term": 5,
+        "price": 100
+    },
+    "paidAmount": 100,
+    "ipAddress": "0:0:0:0:0:0:0:1",
+    "applicationStatus": "APPROVED",
+    "couponTotalAmount": 100,
+    "_links": {
+        "applications/{id}": {
+            "href": "http://localhost:8091/applications/1"
+        }
+    }
+}
+2)update application
+    {
+    	"term":12
+    }
+
