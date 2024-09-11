@@ -10,3 +10,5 @@ Small Spring REST application. There are some features which I have implemented.
 *	The bond is sold if there are no violations of the regulatory requirements. The newly sold bond reference is returned to the client, otherwise the client receives a rejection message.
 *	Client should be able to adjust the term of his bond. Each term extension results in coupon decreased by 10% of its value. Shortening the term doesn’t affect the coupon.
 *	Client should be able to retrieve whole history of his bonds, including adjustments.
+
+Test
